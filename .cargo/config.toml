@@ -1,0 +1,2 @@
+[registries]
+ktra = { index = "ssh://git@gitlab.com/MTRNord/personal-rust-registry.git" }

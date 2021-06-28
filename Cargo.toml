@@ -6,9 +6,11 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-afl =  { version = "0.10.0", features = ["reset_lazy_static"] }
+afl =  { version = "0.11", features = ["reset_lazy_static"], registry = "ktra"  }
 matrix-sdk = "0.3.0"
 url = "2.2.2"
+tokio = { version = "1", features = ["full"] }
+arbitrary = { version = "1"}
 
 [patch.crates-io]
 lazy_static = { git = "https://github.com/rust-fuzz/resettable-lazy-static.rs" }
@@ -16,3 +18,7 @@ lazy_static = { git = "https://github.com/rust-fuzz/resettable-lazy-static.rs" }
 [[bin]]
 name = "fuzz_get_room"
 path = "src/get_room.rs"
+
+[[bin]]
+name = "fuzz_registration"
+path = "src/register_user.rs"
