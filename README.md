@@ -17,7 +17,7 @@ cargo afl build
 After that you can start fuzzing by doing:
 
 ```
-cargo afl fuzz -i in -o out target/debug/matrix-rust-sdk-fuzz-target
+cargo afl fuzz -i in/main -o out target/debug/matrix-rust-sdk-fuzz-target
 ```
 
 ## Learn more

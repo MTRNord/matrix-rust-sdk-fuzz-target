@@ -12,3 +12,7 @@ url = "2.2.2"
 
 [patch.crates-io]
 lazy_static = { git = "https://github.com/rust-fuzz/resettable-lazy-static.rs" }
+
+[[bin]]
+name = "fuzz_get_room"
+path = "src/get_room.rs"
